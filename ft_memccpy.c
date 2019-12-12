@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/18 10:31:57 by rballage          #+#    #+#             */
-/*   Updated: 2018/11/19 09:59:47 by rballage         ###   ########.fr       */
+/*   Created: 2019/12/12 19:29:32 by rballage          #+#    #+#             */
+/*   Updated: 2019/12/12 19:29:33 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/#include "libft.h"
 
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

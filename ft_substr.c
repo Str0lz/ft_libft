@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/12 19:33:51 by rballage          #+#    #+#             */
-/*   Updated: 2019/12/12 19:33:53 by rballage         ###   ########.fr       */
+/*   Created: 2019/12/12 19:34:13 by rballage          #+#    #+#             */
+/*   Updated: 2019/12/12 19:34:14 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *t;
+	char *str;
 
-	t = (0);
-	while (*s)
-	{
-		if (*(s) == c)
-			t = (char*)s;
-		++s;
-	}
-	if (t)
-		return (t);
-	if (c == '\0')
-		return ((char *)s);
-	return (t);
+	if (!s)
+		return (NULL);
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	return (ft_strncpy(str, (s += start), len));
 }

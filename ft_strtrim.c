@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 13:27:03 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/06 15:14:18 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL)
 		return (NULL);
 	if (set == NULL)
-		return (s1);
+		return (ft_strdup(s1));
 	while (*s1 && ft_strhas(set, *s1))
 		s1++;
 	if (*s1 == '\0')

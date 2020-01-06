@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 15:14:18 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/06 15:27:58 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_strhas(const char *set, char c)
 	}
 	return (0);
 }
-// set = null ? renvoyer s1 ou copy s1 ?
+
 char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*end;

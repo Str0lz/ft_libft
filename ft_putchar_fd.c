@@ -6,13 +6,13 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:30:53 by rballage          #+#    #+#             */
-/*   Updated: 2019/12/12 19:30:54 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/06 16:25:26 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int filde)
+void	ft_putchar_fd(char c, int fd)
 {
-	write(filde, &c, 1);
+	write(fd, &c, 1);
 }

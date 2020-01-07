@@ -6,9 +6,11 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 15:05:19 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:09:13 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/07 15:54:37 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

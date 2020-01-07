@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rballage <rballage@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/01/07 15:12:58 by rballage          #+#    #+#              #
+#    Updated: 2020/01/07 15:15:28 by rballage         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 SRCS = ft_isalnum.c \
 	ft_isdigit.c \
@@ -22,11 +34,11 @@ SRCS = ft_isalnum.c \
 	ft_memcmp.c \
 	ft_calloc.c \
 	ft_strnstr.c \
-	ft_putchar_fd.c \
 	ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_itoa.c \
+	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
@@ -34,19 +46,19 @@ SRCS = ft_isalnum.c \
 	ft_strdup.c \
 	ft_split.c
 
-BONUS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstclear.c \
-		ft_lstmap.c
+BONUS = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstmap_bonus.c
 
 OBJS = ${SRCS:.c=.o}
-OBJS_B = ${BONUS:.c=.o}
+OBJS_BONUS = ${BONUS:.c=.o}
 
 HEADERS = libft.h
 CC = gcc -I includes
@@ -58,10 +70,10 @@ all :	${NAME}
 ${NAME}:	${OBJS}
 		ar rcs ${NAME} ${OBJS}
 
-bonus :		${OBJS} ${OBJS_B}
-		ar rcs ${NAME} ${OBJS} ${OBJS_B}
+bonus :		${OBJS} ${OBJS_BONUS}
+		ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 clean:
-	${RM} ${OBJS} ${OBJS_B}
+	${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:		clean
 	${RM}	${NAME}

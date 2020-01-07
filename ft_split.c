@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 15:39:42 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 10:26:15 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/07 15:44:32 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char				**ft_split(char const *s, char c)
 	{
 		if (!(tab[i] = (char*)malloc(sizeof(**tab) * word_len(s, c) + 1)))
 			return (0);
-		str = word_copy(s, tab[i], c);
+		s = word_copy(s, tab[i], c);
 	}
 	tab[i] = 0;
 	return (tab);

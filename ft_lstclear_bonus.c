@@ -1,16 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/07 15:05:19 by rballage          #+#    #+#             */
+/*   Updated: 2020/01/07 15:09:13 by rballage         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*current;
-	t_list	*tmp;
+	t_list	*tmp1;
+	t_list	*tmp2;
 
-	if (!lst || !del)
-		return ;
-	current = *lst;
-	while (current != NULL)
+	if (lst && del)
 	{
-		tmp = current->next;
-		ft_lstdelone(current, del);
-		current = tmp;
+		tmp1 = *lst;
+		while (tmp1)
+		{
+			tmp2 = tmp1->next;
+			ft_lstdelone(tmp1, del);
+			tmp1 = tmp2;
+		}
+		*lst = NULL;
 	}
-	*lst = NULL;
 }

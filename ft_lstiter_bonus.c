@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:28:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 16:21:37 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/07 14:03:22 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,17 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		(*f)(&(tmp->content));
 		tmp = tmp->next;
+	}
+}
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (lst && f)
+	{
+		while (lst != NULL)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
 }

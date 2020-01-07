@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 15:39:42 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:44:32 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/07 16:12:58 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,14 @@ char				**ft_split(char const *s, char c)
 	}
 	tab[i] = 0;
 	return (tab);
+}
+
+int		main(void)
+{
+	char **t;
+	t = ft_split("   65454  45454 2 1   2", '4');
+	while (*t)
+		printf("%s\n", *t++);
+
+	return (0);
 }

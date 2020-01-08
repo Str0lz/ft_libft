@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:34:13 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:25:28 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/08 12:58:17 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char	*ft_strnew(size_t size)
 	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))
 		return (NULL);
 	while (size)
-		str[--size] = '\0';
+		str[size--] = '\0';
 	return (str);
 }
 

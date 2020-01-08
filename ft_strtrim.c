@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 11:26:56 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/08 15:50:17 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,6 @@ static char	*ft_strnew(size_t size)
 	return (str);
 }
 
-static char	*ft_strncpy(char *dest, const char *src, size_t n)
-{
-	size_t i;
-
-	i = -1;
-	while (++i < n)
-		if (*(src + i) != '\0')
-			*(dest + i) = *(src + i);
-		else
-			while (i < n)
-				*(dest + i++) = '\0';
-	return (dest);
-}
-
 static int	ft_strhas(const char *set, char c)
 {
 	while (*set != '\0')
@@ -51,37 +37,37 @@ static int	ft_strhas(const char *set, char c)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*end;
 	size_t i;
 	size_t j;
+	char *res;
 
 	i = 0;
 	j = 0;
-	end = (char*)s1;
-	if (s1 == NULL)
+	res = NULL;
+	if (!s1 && !set)
 		return (NULL);
-	if (set == NULL)
+	else if (!set)
 		return (ft_strdup(s1));
-	while (ft_strhas(set, *s1))
-	{
-		s1++;
-		j++;
-	}
-	if (*s1 == '\0')
+	else if (!s1)
 		return (ft_strnew(0));
-	i = ft_strlen(s1) - j;
-	end += ft_strlen(s1) - 1;
-	while (ft_strhas(set, *end) == 1)
-	{
+
+	while (ft_strhas(set, *(s1 + j)))
+		j++;
+	if (s1 + j == '\0')
+		return (ft_strnew(0));
+	i = ft_strlen(s1) - 1;
+	while (ft_strhas(set, *(s1 + i)))
 		i--;
-		end--;
-	}
-	return (ft_strncpy(ft_strnew(i), &(*s1), i));
+	res = ft_substr(s1, j, i - j + 1);
+	if (!res)
+		return (ft_strnew(0));
+	return (res);
 }
 
 int		main(void)
 {
-		printf("%s\n", ft_strtrim("7665454  45454 2 1---2", " 5462-1"));
+		printf("%s\n", ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
+
 
 	return (0);
 }

@@ -2,3 +2,4 @@ fr.subject.pdf
 *.a
 *.o
 .gitignore
+a.out

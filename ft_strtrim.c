@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 18:22:16 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/08 11:26:56 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,23 @@ char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*end;
 	size_t i;
+	size_t j;
 
 	i = 0;
+	j = 0;
 	end = (char*)s1;
 	if (s1 == NULL)
 		return (NULL);
 	if (set == NULL)
 		return (ft_strdup(s1));
 	while (ft_strhas(set, *s1))
+	{
 		s1++;
+		j++;
+	}
 	if (*s1 == '\0')
 		return (ft_strnew(0));
-	i = ft_strlen(s1)-1;
+	i = ft_strlen(s1) - j;
 	end += ft_strlen(s1) - 1;
 	while (ft_strhas(set, *end) == 1)
 	{
@@ -76,7 +81,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 int		main(void)
 {
-		printf("%s\n", ft_strtrim("65454  45454 2 1---2", " 42-1"));
+		printf("%s\n", ft_strtrim("7665454  45454 2 1---2", " 5462-1"));
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 15:50:17 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/09 10:13:31 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ char		*ft_strtrim(char const *s1, char const *set)
 	return (res);
 }
 
-int		main(void)
-{
-		printf("%s\n", ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
-
-
-	return (0);
-}
+// int		main(void)
+// {
+// 		printf("%s\n", ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
+//
+//
+// 	return (0);
+// }

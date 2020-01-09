@@ -3,3 +3,5 @@ fr.subject.pdf
 *.o
 .gitignore
 a.out
+.TEST
+.TEST/*

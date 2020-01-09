@@ -6,7 +6,7 @@
 #    By: rballage <rballage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/07 15:12:58 by rballage          #+#    #+#              #
-#    Updated: 2020/01/07 15:15:28 by rballage         ###   ########.fr        #
+#    Updated: 2020/01/09 10:30:23 by rballage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,19 +65,18 @@ CC = gcc -I includes
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-all :	${NAME}
+${NAME}: ${OBJS}
+	ar rcs ${NAME} ${OBJS}
+all : ${NAME}
 
-${NAME}:	${OBJS}
-		ar rcs ${NAME} ${OBJS}
-
-bonus :		${OBJS} ${OBJS_BONUS}
-		ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
+bonus :  ${OBJS} ${OBJS_BONUS}
+	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 clean:
 	${RM} ${OBJS} ${OBJS_BONUS}
 
-fclean:		clean
-	${RM}	${NAME}
+fclean: clean
+	${RM} ${NAME}
 
-re:	fclean all
+re: fclean all
 
-.PHONY:		all clean re fclean bonus
+.PHONY: all clean re fclean bonus

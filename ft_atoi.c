@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:27:22 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 16:20:49 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/08 16:51:23 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_atoi(const char *str)
 {
 	int sign;
-	long long n;
+	unsigned long long n;
 
 	sign = 1;
 	n = 0;
@@ -33,7 +33,7 @@ int		ft_atoi(const char *str)
 			n = n * 10 + (*str - 48);
 		str++;
 	}
-	if ((n * sign >= 2147483648) || (n * sign <= -2147483649))
-		return (-1);
+	if (n > 9223372036854775807)
+		return (sign == -1 ? 0 : -1);
 	return ((int)(n * sign));
 }

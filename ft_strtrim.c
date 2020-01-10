@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:59 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/09 10:13:31 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:29:56 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*ft_strnew(size_t size)
 {
-	char *str;
+	char	*str;
 
 	str = NULL;
 	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))
@@ -37,9 +37,9 @@ static int	ft_strhas(const char *set, char c)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	char *res;
+	size_t	i;
+	size_t	j;
+	char	*res;
 
 	i = 0;
 	j = 0;
@@ -50,7 +50,6 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	else if (!s1)
 		return (ft_strnew(0));
-
 	while (ft_strhas(set, *(s1 + j)))
 		j++;
 	if (s1 + j == '\0')
@@ -63,11 +62,3 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (ft_strnew(0));
 	return (res);
 }
-
-// int		main(void)
-// {
-// 		printf("%s\n", ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t"));
-//
-//
-// 	return (0);
-// }

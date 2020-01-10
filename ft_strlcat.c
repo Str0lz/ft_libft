@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:32:12 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:21:52 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:28:22 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = -1;
 	j = (int)ft_strlen(dest);
@@ -25,10 +25,10 @@ static char	*ft_strncat(char *dest, const char *src, size_t n)
 	return (dest);
 }
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t len_src;
-	size_t len_dest;
+	size_t	len_src;
+	size_t	len_dest;
 
 	len_src = ft_strlen(src);
 	len_dest = ft_strlen(dest);

@@ -6,17 +6,15 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:32:04 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 13:26:21 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:27:52 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// ADD STRCAT ET STRCPY EN STATIC PLIZ THX
 
 #include "libft.h"
 
 static char	*ft_strnew(size_t size)
 {
-	char *str;
+	char	*str;
 
 	str = NULL;
 	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))
@@ -26,10 +24,10 @@ static char	*ft_strnew(size_t size)
 	return (str);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t tot;
+	char	*str;
+	size_t	tot;
 
 	str = NULL;
 	if (!s1 || !s2)
@@ -43,10 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*str++ = *s2++;
 	return (str - tot);
 }
-// 
-// int		main(void)
-// {
-// 		printf("%s\n", ft_strjoin(" ", "444444447777665454  454754 2 1---2"));
-//
-// 	return (0);
-// }

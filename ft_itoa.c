@@ -6,15 +6,15 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:28:41 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 13:27:35 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:26:58 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strnew(size_t size)
+static char		*ft_strnew(size_t size)
 {
-	char *str;
+	char		*str;
 
 	str = NULL;
 	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))

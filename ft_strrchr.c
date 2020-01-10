@@ -6,15 +6,15 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:33:51 by rballage          #+#    #+#             */
-/*   Updated: 2019/12/12 19:33:53 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:30:39 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char		*ft_strrchr(const char *s, int c)
 {
-	char *t;
+	char	*t;
 
 	t = (0);
 	while (*s)

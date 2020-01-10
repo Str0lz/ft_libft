@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 10:30:24 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 17:34:04 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:26:03 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (!lst)

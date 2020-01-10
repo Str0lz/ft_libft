@@ -6,13 +6,13 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 15:55:31 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:39:00 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:30:57 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	len;
 	char			*s2;

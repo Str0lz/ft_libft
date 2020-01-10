@@ -6,15 +6,15 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:32:22 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/07 15:25:53 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:31:14 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	if (!src)
 		return (0);

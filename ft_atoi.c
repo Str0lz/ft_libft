@@ -6,16 +6,16 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:27:22 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/08 16:51:23 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:32:19 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int						ft_atoi(const char *str)
 {
-	int sign;
-	unsigned long long n;
+	int					sign;
+	unsigned long long	n;
 
 	sign = 1;
 	n = 0;

@@ -6,13 +6,13 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:30:34 by rballage          #+#    #+#             */
-/*   Updated: 2019/12/12 19:30:35 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:26:23 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void				*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char	*s1;
 	unsigned char	*s2;

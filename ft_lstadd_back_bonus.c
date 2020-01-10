@@ -6,13 +6,13 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 10:30:24 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/09 09:59:13 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:25:25 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **alst, t_list *new)
+void		ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*tmp;
 

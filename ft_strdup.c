@@ -6,13 +6,13 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:31:55 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/06 13:26:54 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/10 12:31:24 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char		*ft_strdup(const char *s1)
 {
 	int		i;
 	char	*dest;

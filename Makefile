@@ -6,7 +6,7 @@
 #    By: rballage <rballage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/07 15:12:58 by rballage          #+#    #+#              #
-#    Updated: 2020/01/10 14:00:40 by rballage         ###   ########.fr        #
+#    Updated: 2020/01/10 14:08:39 by rballage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,22 @@ SRCS = ft_isalnum.c \
 	ft_lstclear.c \
 	ft_lstmap.c
 
-# BONUS = 
+OLD = ft_memdel.c \
+	ft_putchar.c \
+	ft_strcat.c \
+	ft_strclr.c \
+	ft_strcpy.c \
+	ft_strdel.c \
+	ft_strequ.c \
+	ft_strjoinf.c \
+	ft_strncat.c \
+	ft_strncpy.c \
+	ft_strnew.c \
+	ft_swap.c \
+	ft_strrev
 
 OBJS = ${SRCS:.c=.o}
-OBJS_BONUS = ${BONUS:.c=.o}
+OBJS_OLD = ${OLD:.c=.o}
 
 HEADERS = libft.h
 CC = gcc -I includes
@@ -71,14 +83,14 @@ all : $(NAME)
 $(NAME): ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-bonus :  ${OBJS} ${OBJS_BONUS}
-	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
+old :  ${OBJS} ${OBJS_OLD}
+	ar rcs ${NAME} ${OBJS} ${OBJS_OLD}
 clean:
-	${RM} ${OBJS} ${OBJS_BONUS}
+	${RM} ${OBJS} ${OBJS_OLD}
 
 fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
 
-.PHONY: all clean re fclean bonus
+.PHONY: all clean re fclean old

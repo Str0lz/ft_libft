@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:34:13 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/13 12:42:36 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/13 12:51:42 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 
-	if (!ft_strlen(s) || start >= len || (len - start) > ft_strlen(s) || start > ft_strlen(s) || start < 0 || len <= 0)
+	if (!s || !(*s) || !ft_strlen(s) || start >= len || (len - start) > ft_strlen(s) || start > ft_strlen(s) || start < 0 || len <= 0)
 		return (NULL);
 	if (!(str = ft_strnew(len)))
 		return (NULL);

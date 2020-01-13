@@ -6,25 +6,11 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:34:13 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/13 13:08:35 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/13 18:00:13 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*ft_strncpy(char *dest, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = -1;
-	while (++i < n)
-		if (*(src + i) != '\0')
-			*(dest + i) = *(src + i);
-		else
-			while (i < n)
-				*(dest + i++) = '\0';
-	return (dest);
-}
 
 static char	*ft_strnew(size_t size)
 {
@@ -38,26 +24,27 @@ static char	*ft_strnew(size_t size)
 	return (str);
 }
 
-char		*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*new;
 	size_t	i;
 	size_t	j;
-	char	*str;
 
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
 	i = 0;
 	j = 0;
+	if (!s || !(new = ft_strnew(len)))
+		return (NULL);
 	while (s[i])
 	{
 		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+			new[j++] = s[i];
 		i++;
 	}
-	str[j] = 0;
-	return (str);
+	new[j] = '\0';
+	return (new);
 }
+// int		main(void)
+// {
+// 	printf("%s\n", ft_substr(ft_strnew(0), 0, 0));
+// 	return (0);
+// }

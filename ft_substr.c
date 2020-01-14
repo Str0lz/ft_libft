@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:34:13 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/13 18:00:13 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/14 15:39:43 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char	*ft_strnew(size_t size)
 	return (str);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new;
 	size_t	i;
@@ -43,8 +43,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new[j] = '\0';
 	return (new);
 }
-// int		main(void)
-// {
-// 	printf("%s\n", ft_substr(ft_strnew(0), 0, 0));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 17:40:54 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/15 11:29:08 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:37:39 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,9 @@ int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strnew(size_t size);
 char			*ft_strrev(char *str);
 void			ft_swap(int *a, int *b);
+int				ft_strcmp(const char *s1, const char *s2);
+void			ft_memdel(void **ap);
+
+
 
 #endif

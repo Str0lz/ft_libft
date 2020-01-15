@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/18 10:30:38 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/15 11:32:17 by rballage         ###   ########.fr       */
+/*   Created: 2018/11/18 10:33:50 by rballage          #+#    #+#             */
+/*   Updated: 2018/11/19 10:38:50 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_any(char **tab, int (*f) (char*))
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	int g;
+	size_t i;
 
 	i = 0;
-	g = 0;
-	while (tab[i] && g == 0)
-		(f(tab[i])) ? (g = 1) : i++;
-	return (g);
+	while (*(s1 + i) == *(s2 + i) && *(s1 + i) && *(s2 + i))
+		i++;
+	return ((unsigned char)*(s1 + i) - (unsigned char)*(s2 + i));
 }

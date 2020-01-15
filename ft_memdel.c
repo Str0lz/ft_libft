@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/18 10:30:38 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/15 11:32:17 by rballage         ###   ########.fr       */
+/*   Created: 2018/11/18 10:32:15 by rballage          #+#    #+#             */
+/*   Updated: 2018/11/18 10:32:17 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_any(char **tab, int (*f) (char*))
+void	ft_memdel(void **ap)
 {
-	int i;
-	int g;
-
-	i = 0;
-	g = 0;
-	while (tab[i] && g == 0)
-		(f(tab[i])) ? (g = 1) : i++;
-	return (g);
+	if (ap && *ap)
+	{
+		free(*ap);
+		*ap = 0;
+	}
 }

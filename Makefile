@@ -6,7 +6,7 @@
 #    By: rballage <rballage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/07 15:12:58 by rballage          #+#    #+#              #
-#    Updated: 2020/01/15 11:10:21 by rballage         ###   ########.fr        #
+#    Updated: 2020/01/15 11:36:26 by rballage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,9 @@ SRCS = ft_isalnum.c \
 	ft_strnew.c \
 	ft_strrev.c \
 	ft_swap.c \
-	ft_putchar.c
+	ft_putchar.c \
+	ft_strcmp.c \
+	ft_memdel.c
 
 
 OBJS = ${SRCS:.c=.o}

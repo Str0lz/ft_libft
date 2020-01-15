@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:27:22 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/13 12:59:36 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:11:57 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int						ft_atoi(const char *str)
 
 	sign = 1;
 	n = 0;
-	while ((*str + 0 <= 13 && *str + 0 >= 9) || *str + 0 == 32)
+	while ((*str <= 13 && *str >= 9) || *str == 32)
 		str++;
 	while ((ft_isdigit(*str) || *str == '+' || *str == '-') && *str != '\0')
 	{

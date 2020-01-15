@@ -6,23 +6,11 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 19:28:41 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/10 12:26:58 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:12:23 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char		*ft_strnew(size_t size)
-{
-	char		*str;
-
-	str = NULL;
-	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))
-		return (NULL);
-	while (size)
-		str[size--] = '\0';
-	return (str);
-}
 
 static size_t	get_len(long nb)
 {

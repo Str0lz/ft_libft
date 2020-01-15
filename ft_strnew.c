@@ -6,20 +6,20 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 10:34:34 by rballage          #+#    #+#             */
-/*   Updated: 2018/11/19 14:40:26 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:16:09 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+schar		*ft_strnew(size_t size)
 {
-	char *str;
+	char	*str;
 
 	str = NULL;
-	if (!(str = ft_memalloc(size + 1)))
+	if (!(str = (char *)malloc((sizeof(char) * size) + 1)))
 		return (NULL);
 	while (size)
-		str[--size] = '\0';
+		str[size--] = '\0';
 	return (str);
 }

@@ -6,7 +6,7 @@
 #    By: rballage <rballage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/07 15:12:58 by rballage          #+#    #+#              #
-#    Updated: 2020/01/15 10:59:34 by rballage         ###   ########.fr        #
+#    Updated: 2020/01/15 11:10:21 by rballage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,32 @@ SRCS = ft_isalnum.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstclear.c \
-	ft_lstmap.c
+	ft_lstmap.c \
+	ft_any.c \
+	ft_count_if.c \
+	ft_foreach.c \
+	ft_is_prime.c \
+	ft_is_sort.c \
+	ft_map.c \
+	ft_mapn.c \
+	ft_memalloc.c \
+	ft_putchar.c \
+	ft_putstr.c \
+	ft_sqrt.c \
+	ft_strcat.c \
+	ft_strclr.c \
+	ft_strcpy.c \
+	ft_strdel.c \
+	ft_strequ.c \
+	ft_strjoinf.c \
+	ft_strncat.c \
+	ft_strncpy.c \
+	ft_strnequ.c \
+	ft_strnew.c \
+	ft_strrev.c \
+	ft_swap.c \
+	ft_putchar.c
+
 
 OBJS = ${SRCS:.c=.o}
 

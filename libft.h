@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 17:40:54 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/10 12:29:35 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:29:08 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,28 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 				void (*del)(void *));
+int				ft_any(char **tab, int (*f) (char*));
+int				ft_count_if(char **tab, int (*f) (char*));
+void			ft_foreach(int *tab, int length, void (*f)(int));
+int				ft_is_prime(int nb);
+int				ft_is_sort(int *tab, int length, int (*f) (int, int));
+int				*ft_map(int *tab, int length, int (*f)(int));
+int				*ft_mapn(int *tab, int length, int (*f)(int));
+void			*ft_memalloc(size_t size);
+void			ft_putchar(char ch);
+void			ft_putstr(char *str);
+int				ft_sqrt(int nb);
+char			*ft_strcat(char *dest, const char *src);
+void			ft_strclr(char *s);
+char			*ft_strcpy(char *dest, const char *src);
+void			ft_strdel(char **ap);
+int				ft_strequ(char const *s1, char const *s2);
+char			*ft_strjoinf(char const *s1, char const *s2);
+char			*ft_strncat(char *dest, const char *src, size_t n);
+char			*ft_strncpy(char *dest, const char *src, size_t n);
+int				ft_strnequ(char const *s1, char const *s2, size_t n);
+char			*ft_strnew(size_t size);
+char			*ft_strrev(char *str);
+void			ft_swap(int *a, int *b);
 
 #endif

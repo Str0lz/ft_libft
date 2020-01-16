@@ -6,7 +6,7 @@
 /*   By: rballage <rballage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 10:34:34 by rballage          #+#    #+#             */
-/*   Updated: 2020/01/15 11:18:39 by rballage         ###   ########.fr       */
+/*   Updated: 2020/01/16 16:08:42 by rballage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ char		*ft_strnew(size_t size)
 		return (NULL);
 	while (size)
 		str[size--] = '\0';
+	str[0] = '\0';
 	return (str);
 }
